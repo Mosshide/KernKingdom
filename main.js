@@ -1,14 +1,14 @@
 class Player {
-  constructor(g) {
-    this.gold = g;
+  constructor(gold) {
+    this.gold = gold;
   }
   
   spendGold(gold) {
-    this.gold -= Math.floor(g);
+    this.gold -= Math.floor(gold);
   }
   
   gainGold(gold) {
-    this.gold += Math.floor(g);
+    this.gold += Math.floor(gold);
   }
 }
 
@@ -17,10 +17,11 @@ const buildingPadding = 50;
 let buildingTypes = ["New", "Castle", "Farm", "Dungeon"];
 class Building {
   constructor(active, type, div, xOrder) {
-	this.active = active;
-    this.type = t;
-	this.div = d;
-	div.setAttribute("left", (buildingSize + buildingPadding) * xOrder  + buildingPadding;
+    this.active = active;
+    this.type = type;
+    this.div = div;
+    div.style.left = ((buildingSize + buildingPadding) * xOrder  + buildingPadding).toString() + "px";
+    div.style.width = buildingSize.toString() + "px";
   }
 }
 

@@ -82,7 +82,7 @@ button {
 	position: absolute;
 	bottom: 20%;
 	height: 250%;
-	border: none;
+	border: 5px solid gray;
 	outline: none;
 	background-color: #99999900;
 }
