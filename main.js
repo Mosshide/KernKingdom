@@ -3,12 +3,24 @@ class Player {
     this.gold = g;
   }
   
-  spendGold(g) {
+  spendGold(gold) {
     this.gold -= Math.floor(g);
   }
   
-  gainGold(g) {
+  gainGold(gold) {
     this.gold += Math.floor(g);
+  }
+}
+
+const buildingSize = 1000;
+const buildingPadding = 50;
+let buildingTypes = ["New", "Castle", "Farm", "Dungeon"];
+class Building {
+  constructor(active, type, div, xOrder) {
+	this.active = active;
+    this.type = t;
+	this.div = d;
+	div.setAttribute("left", (buildingSize + buildingPadding) * xOrder  + buildingPadding;
   }
 }
 
@@ -24,6 +36,8 @@ let goldAmountText = document.querySelector("#goldAmount");
 let running = true;
 let deltaTime = Date.now();
 let lastTime = deltaTime;
+let buildings = [new Building(true, buildingTypes[1], document.querySelector(".building"), 0)];
+let newBuilding = [new Building(true, buildingTypes[0], document.querySelector(".newBuilding"), buildings.length)];
 
 function update() {
 	deltaTime = Date.now() - lastTime;

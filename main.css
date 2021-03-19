@@ -77,3 +77,27 @@ button {
 	left: 7%;
 	bottom: 20%;
 }
+
+.newBuilding {
+	position: absolute;
+	bottom: 20%;
+	height: 250%;
+	border: none;
+	outline: none;
+	background-color: #99999900;
+}
+
+.building {
+	position: absolute;
+	bottom: 20%;
+	height: 250%;
+	border: none;
+	outline: none;
+	background-color: #99999900;
+}
+
+.buildingProfilePic {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
