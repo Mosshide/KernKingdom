@@ -1,11 +1,14 @@
-class Building {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
+class Player {
+  constructor(g) {
+    this.gold = g;
   }
   
-  distance(a, b) {
-    return Math.hypot(a, b);
+  spendGold(g) {
+    this.gold -= Math.floor(g);
+  }
+  
+  gainGold(g) {
+    this.gold += Math.floor(g);
   }
 }
 
@@ -15,3 +18,19 @@ window.addEventListener('wheel', function(e) {
 	  document.documentElement.scrollLeft += e.deltaY;
   }
 });
+
+let player = new Player(0);
+let goldAmountText = document.querySelector("#goldAmount");
+let running = true;
+let deltaTime = Date.now();
+let lastTime = deltaTime;
+
+function update() {
+	deltaTime = Date.now() - lastTime;
+	lastTime = Date.now();
+	
+	player.gainGold(deltaTime / 100);
+	goldAmountText.innerHTML = player.gold.toString();
+}
+
+setInterval(update, 100);
