@@ -1,3 +1,4 @@
+//Set up player information
 class Player {
   constructor(gold) {
     this.gold = gold;
@@ -12,9 +13,10 @@ class Player {
   }
 }
 
+//set up building information
 const buildingSize = 1000;
 const buildingPadding = 50;
-let buildingTypes = ["New", "Castle", "Farm", "Dungeon"];
+let buildingTypes = ["New", "Castle", "Settlement", "Dungeon"];
 class Building {
   constructor(active, type, div, xOrder) {
     this.active = active;
@@ -25,6 +27,7 @@ class Building {
   }
 }
 
+//set up horizontal scrolling
 window.addEventListener('wheel', function(e) {
   if (e.deltaY !== 0) {
 	  document.documentElement.scrollTop -= e.deltaY;
@@ -32,14 +35,17 @@ window.addEventListener('wheel', function(e) {
   }
 });
 
+//set up globals
+let running = true;
 let player = new Player(0);
 let goldAmountText = document.querySelector("#goldAmount");
-let running = true;
 let deltaTime = Date.now();
 let lastTime = deltaTime;
-let buildings = [new Building(true, buildingTypes[1], document.querySelector(".building"), 0)];
-let newBuilding = [new Building(true, buildingTypes[0], document.querySelector(".newBuilding"), buildings.length)];
+let buildings = [new Building(true, buildingTypes[1], document.querySelector(".castle"), 0)];
+let newBuilding = new Building(true, buildingTypes[0], document.querySelector(".newBuilding"), buildings.length);
+document.querySelector("#sky").style.width = (buildings.length + 1) * (buildingSize + buildingPadding) + 500;
 
+//define game loop
 function update() {
 	deltaTime = Date.now() - lastTime;
 	lastTime = Date.now();
@@ -48,4 +54,5 @@ function update() {
 	goldAmountText.innerHTML = player.gold.toString();
 }
 
+//run game loop
 setInterval(update, 100);

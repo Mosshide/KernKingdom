@@ -2,7 +2,10 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Cormorant Unicase', serif;
+	font-size: 20px;
 	color: #BBBBBB;
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: pixelated;
 }
 
 #sky, #ground {
@@ -12,23 +15,23 @@ html, body {
 #sky {
 	position: absolute;
 	background-color: #8888FF;
-	top: 2%;
-	left: 0%;
+	top: 0;
+	left: 0;
 	height: 65%;
 }
 
 #ground {
 	position: absolute;
 	background-color: #117711;
-	top: 67%;
+	top: 65%;
 	left: 0%;
-	height: 30%;
+	height: 35%;
 }
 
 footer {
 	background-color: black;
 	width: 100%;
-	height: 5%;
+	height: 50px;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -38,10 +41,11 @@ footer {
 header {
 	background-color: black;
 	width: 100%;
-	height: 2%;
+	height: 20px;
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 99;
 }
 
 button {
@@ -56,26 +60,32 @@ button {
 
 #goldButton {
 	left: 1%;
-	background-color: #FFD659;
+	background-color: #FFD65900;
+	background-image: url("img/gold.png");
+	background-size: cover;
 }
 
 #goldButton:hover {
-	background-color: #FFE38F;
+	filter: brightness(1.25);
 }
 
 #saveButton {
 	right: 1%;
 	background-color: #222222;
+	background-image: url("img/save.png");
+	background-size: cover;
 }
 
 #saveButton:hover {
-	background-color: #444444;
+	filter: brightness(1.25);
 }
 
 #goldAmount {
 	position: absolute;
+	font-size: 25px;
 	left: 7%;
-	bottom: 20%;
+	bottom: calc(50% - 12px);
+	margin: 0;
 }
 
 .newBuilding {
@@ -85,9 +95,10 @@ button {
 	border: 5px solid gray;
 	outline: none;
 	background-color: #99999900;
+	display: none;
 }
 
-.building {
+.castle {
 	position: absolute;
 	bottom: 20%;
 	height: 250%;
@@ -96,8 +107,62 @@ button {
 	background-color: #99999900;
 }
 
+.settlement {
+	position: absolute;
+	bottom: 20%;
+	height: 250%;
+	border: none;
+	outline: none;
+	background-color: #99999900;
+	display: none;
+}
+
+.dungeon {
+	position: absolute;
+	bottom: 20%;
+	height: 250%;
+	border: none;
+	outline: none;
+	background-color: #99999900;
+	display: none;
+}
+
 .buildingProfilePic {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+}
+
+.plus {
+	width: 32px;
+	position: absolute;
+	bottom: calc(50% - 16px);
+	left: calc(50% - 16px);
+}
+
+.right {
+	float: right;
+}
+
+.dialogueBox {
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	width: 750px;
+	height: 250px;
+	background-color: #444444;
+	border: #000000 solid 5px;
+}
+
+.dialoguePic {
+	display: inline;
+	float: left;
+}
+
+.dialogueName {
+	font-size: 30px;
+}
+
+.dialogue {
+	display: inline;
 }
