@@ -84,7 +84,7 @@ button:active {
 #goldAmount {
 	position: absolute;
 	font-size: 25px;
-	left: 7%;
+	left: 90px;
 	bottom: calc(50% - 12px);
 	margin: 0;
 }
@@ -154,11 +154,15 @@ button:active {
 	background-color: #444444;
 	border: #000000 solid 3px;
 	border-radius: 10px;
+	display: none;
 }
 
 .dialoguePic {
 	display: inline;
 	float: left;
+	margin: 10px;
+	width: 230px;
+	height: 230px;
 }
 
 .dialogueName {
@@ -167,4 +171,14 @@ button:active {
 
 .dialogue {
 	display: inline;
+}
+
+.exitButton {
+	color: rgb(255, 0, 0);
+	background-color: rgb(99, 99, 99);
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
