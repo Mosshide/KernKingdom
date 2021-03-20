@@ -51,11 +51,20 @@ header {
 button {
 	position: absolute;
 	bottom: 15%;
-	width: 5%;
-	height: 100%;
-	border: none;
+	width: 64px;
+	height: 64px;
+	border: #000000 solid 3px;
+	border-radius: 10px;
 	outline: none;
 	color: #BBBBBB;
+}
+
+button:hover {
+	filter: brightness(1.15);
+}
+
+button:active {
+	filter: brightness(.85);
 }
 
 #goldButton {
@@ -65,19 +74,11 @@ button {
 	background-size: cover;
 }
 
-#goldButton:hover {
-	filter: brightness(1.25);
-}
-
 #saveButton {
 	right: 1%;
-	background-color: #222222;
+	background-color: #22222200;
 	background-image: url("img/save.png");
 	background-size: cover;
-}
-
-#saveButton:hover {
-	filter: brightness(1.25);
 }
 
 #goldAmount {
@@ -151,7 +152,8 @@ button {
 	width: 750px;
 	height: 250px;
 	background-color: #444444;
-	border: #000000 solid 5px;
+	border: #000000 solid 3px;
+	border-radius: 10px;
 }
 
 .dialoguePic {
