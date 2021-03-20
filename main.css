@@ -8,6 +8,13 @@ html, body {
 	image-rendering: pixelated;
 }
 
+img {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 #sky, #ground {
 	width: 5000px;
 }
@@ -41,7 +48,7 @@ footer {
 header {
 	background-color: black;
 	width: 100%;
-	height: 20px;
+	height: 22px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -57,6 +64,10 @@ button {
 	border-radius: 10px;
 	outline: none;
 	color: #BBBBBB;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 button:hover {
@@ -72,6 +83,7 @@ button:active {
 	background-color: #FFD65900;
 	background-image: url("img/gold.png");
 	background-size: cover;
+	border: none;
 }
 
 #saveButton {
@@ -79,6 +91,7 @@ button:active {
 	background-color: #22222200;
 	background-image: url("img/save.png");
 	background-size: cover;
+	border: none;
 }
 
 #goldAmount {
@@ -155,6 +168,7 @@ button:active {
 	border: #000000 solid 3px;
 	border-radius: 10px;
 	display: none;
+	z-index: 99;
 }
 
 .dialoguePic {
@@ -174,11 +188,12 @@ button:active {
 }
 
 .exitButton {
-	color: rgb(255, 0, 0);
+	color: rgb(199, 0, 0);
 	background-color: rgb(99, 99, 99);
 	width: 32px;
 	height: 32px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
+	font-weight: bold;
 }

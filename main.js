@@ -27,7 +27,7 @@ let deltaTime = Date.now();
 let lastTime = deltaTime;
 
 //test
-dialogue.set("img/baby_kern_forest.png", "Kern Baby", "Baby Kern, in a forest.")
+dialogue.set("img/kern.png", "Kern Baby", "Baby Kern, in a forest.")
 dialogue.show();
 
 //define game loop
