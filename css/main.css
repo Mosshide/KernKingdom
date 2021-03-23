@@ -64,6 +64,7 @@ button {
 	border-radius: 10px;
 	outline: none;
 	color: #BBBBBB;
+	background-color: rgba(99, 99, 99, 0.726);
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -81,7 +82,7 @@ button:active {
 #goldButton {
 	left: 1%;
 	background-color: #FFD65900;
-	background-image: url("img/gold.png");
+	background-image: url("../img/gold.png");
 	background-size: cover;
 	border: none;
 }
@@ -89,7 +90,7 @@ button:active {
 #saveButton {
 	right: 1%;
 	background-color: #22222200;
-	background-image: url("img/save.png");
+	background-image: url("../img/save.png");
 	background-size: cover;
 	border: none;
 }
@@ -164,7 +165,7 @@ button:active {
 	left: 40px;
 	width: 750px;
 	height: 250px;
-	background-color: #444444;
+	background-color: #444444c2;
 	border: #000000 solid 3px;
 	border-radius: 10px;
 	display: none;
@@ -189,11 +190,17 @@ button:active {
 
 .exitButton {
 	color: rgb(199, 0, 0);
-	background-color: rgb(99, 99, 99);
 	width: 32px;
 	height: 32px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	font-weight: bold;
+}
+
+.buildingButton {
+	position: absolute;
+	width: 75%;
+	bottom: 0;
+	left: 12.5%;
 }
