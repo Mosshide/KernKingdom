@@ -14,43 +14,49 @@
 
 	<body>
 		<header>
-			KernKingdom V.01 <span class="right">Wyatt Sushinsky</span>
+			<h1>KernKingdom V.01</h1> <span class="right">Wyatt Sushinsky</span>
 		</header>
 		
-		<div id="sky">
-			<div class="dialogueBox">
-				<img src="img/kern.png" class="dialoguePic">
-				<h1 class="dialogueName">Name</h1>
-				<p class="dialogue">Insert dialogue here.</p>
-				<button class="exitButton" id="dialogueExit">x</button>
+		<main>
+			<div id="sky">
+				<div class="dialogue-box">
+					<img src="img/kern.png" class="dialogue-pic">
+					<h2 class="dialogue-name">Name</h2>
+					<p class="dialogue-text">Insert dialogue here.</p>
+					<button class="exit-button" id="dialogue-exit">x</button>
+					<button class="next-button" id="dialogue-next">NEXT</button>
+					<button class="prev-button" id="dialogue-prev">PREV</button>
+				</div>
 			</div>
-		</div>
-		
-		<div id="ground">
-			<div class="castle">
-				<img src="img/castle broken.png" class="buildingProfilePic">
-				<button class="buildingButton">Clean Up</button>
+			
+			<div id="ground">
+				<div class="castle">
+					<img src="img/castle broken.png" class="building-profile-pic">
+					<button class="building-button">Clean Up</button>
+				</div>
+				<div class="settlement">
+					<img src="img/settlement.png" class="building-profile-pic">
+				</div>
+				<div class="dungeon">
+					<img src="img/dungeon.png" class="building-profile-pic">
+				</div>
+				<div class="new-building">
+					<img src="img/plus.png" class="plus">
+				</div>
 			</div>
-			<div class="settlement">
-				<img src="img/settlement.png" class="buildingProfilePic">
-			</div>
-			<div class="dungeon">
-				<img src="img/dungeon.png" class="buildingProfilePic">
-			</div>
-			<div class="newBuilding">
-				<img src="img/plus.png" class="plus">
-			</div>
-		</div>
+		</main>
 		
 		<footer>
-			<button id="goldButton"></button>
-			<p id="goldAmount">Amount</p>
-			<button id="saveButton"></button>
+			<button class="gold-button"></button>
+			<p class="gold-amount">Amount</p>
+			<button class="save-button"></button>
 		</footer>
-
+		
+		<script src="js/util.js"></script>
 		<script src="js/player.js"></script>
 		<script src="js/building.js"></script>
 		<script src="js/dialogue.js"></script>
+		<script src="dialogue/dialogueBank.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

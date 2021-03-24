@@ -1,11 +1,22 @@
-html, body {
-	height: 100%;
-	width: 100%;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	font-family: 'Cormorant Unicase', serif;
 	font-size: 20px;
 	color: #BBBBBB;
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: pixelated;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	display: inline;
+	font-size: 20px;
 }
 
 img {
@@ -21,7 +32,7 @@ img {
 
 #sky {
 	position: absolute;
-	background-color: #8888FF;
+	background-color: #b7b7ff;
 	top: 0;
 	left: 0;
 	height: 65%;
@@ -29,7 +40,7 @@ img {
 
 #ground {
 	position: absolute;
-	background-color: #117711;
+	background-color: #596859;
 	top: 65%;
 	left: 0%;
 	height: 35%;
@@ -79,7 +90,7 @@ button:active {
 	filter: brightness(.85);
 }
 
-#goldButton {
+.gold-button {
 	left: 1%;
 	background-color: #FFD65900;
 	background-image: url("../img/gold.png");
@@ -87,7 +98,7 @@ button:active {
 	border: none;
 }
 
-#saveButton {
+.save-button {
 	right: 1%;
 	background-color: #22222200;
 	background-image: url("../img/save.png");
@@ -95,7 +106,7 @@ button:active {
 	border: none;
 }
 
-#goldAmount {
+.gold-amount {
 	position: absolute;
 	font-size: 25px;
 	left: 90px;
@@ -103,7 +114,7 @@ button:active {
 	margin: 0;
 }
 
-.newBuilding {
+.new-building {
 	position: absolute;
 	bottom: 20%;
 	height: 250%;
@@ -142,7 +153,7 @@ button:active {
 	display: none;
 }
 
-.buildingProfilePic {
+.building-profile-pic {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -159,28 +170,28 @@ button:active {
 	float: right;
 }
 
-.dialogueBox {
+.dialogue-box {
 	position: fixed;
 	top: 40px;
 	left: 40px;
 	width: 750px;
 	height: 250px;
-	background-color: #444444c2;
+	background-color: #3d3d3dc2;
 	border: #000000 solid 3px;
 	border-radius: 10px;
 	display: none;
 	z-index: 99;
+	padding: 10px;
 }
 
-.dialoguePic {
+.dialogue-pic {
 	display: inline;
 	float: left;
-	margin: 10px;
-	width: 230px;
-	height: 230px;
+	width: 220px;
+	height: 220px;
 }
 
-.dialogueName {
+.dialogue-name {
 	font-size: 30px;
 }
 
@@ -188,8 +199,8 @@ button:active {
 	display: inline;
 }
 
-.exitButton {
-	color: rgb(199, 0, 0);
+.exit-button {
+	color: rgba(199, 0, 0, 0.842);
 	width: 32px;
 	height: 32px;
 	position: absolute;
@@ -198,7 +209,27 @@ button:active {
 	font-weight: bold;
 }
 
-.buildingButton {
+.next-button {
+	color: rgba(146, 146, 146, 0.815);
+	width: 75px;
+	height: 32px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-weight: bold;
+}
+
+.prev-button {
+	color: rgba(146, 146, 146, 0.801);
+	width: 75px;
+	height: 32px;
+	position: absolute;
+	bottom: 10px;
+	right: 100px;
+	font-weight: bold;
+}
+
+.building-button {
 	position: absolute;
 	width: 75%;
 	bottom: 0;

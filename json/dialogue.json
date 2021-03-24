@@ -1,8 +1,0 @@
-{
-    "dialogues":[    
-    {"img":"img/kern.png", "name":"A Nother Kern", "dialogue":23},    
-    {"img":"img/kern.png", "name":"A Nother Kern", "dialogue":28},  
-    {"img":"img/kern.png", "name":"A Nother Kern", "dialogue":33},    
-    {"img":"img/kern.png", "name":"A Nother Kern", "dialogue":41}   
-    ]
-}  
