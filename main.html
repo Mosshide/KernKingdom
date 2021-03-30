@@ -33,6 +33,17 @@
 				<div class="castle">
 					<img src="img/castle broken.png" class="building-profile-pic">
 					<button class="building-button">Clean Up</button>
+					<div class="part-grid">
+						<div class="building-part">
+							<h3>Worker</h3>
+							<img src="img/kern.png">
+							<p>You have 0 workers.</p>
+							<div class="buy-grid">
+								<button class="buy-button">Buy: 10g</button>
+								<button class="sell-button">Sell: 3g</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="settlement">
 					<img src="img/settlement.png" class="building-profile-pic">
@@ -50,10 +61,18 @@
 			<button class="gold-button"></button>
 			<p class="gold-amount">Amount</p>
 			<button class="save-button"></button>
+			<div class="popup" id="popup-0">
+				<img src="img/kern.png" class="popup-icon">
+				<h2 class="popup-title">Title</h2>
+				<p class="popup-info">Insert information here.</p>
+			</div>
 		</footer>
 		
 		<script src="js/util.js"></script>
+		<script src="js/timing.js"></script>
+		<script src="js/popup.js"></script>
 		<script src="js/player.js"></script>
+		<script src="js/buildingPart.js"></script>
 		<script src="js/building.js"></script>
 		<script src="js/dialogue.js"></script>
 		<script src="dialogue/dialogueBank.js"></script>

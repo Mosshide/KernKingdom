@@ -52,11 +52,10 @@ class DialogueBox {
 
     /**
      * 
-     * @param {number} delta Time since last update.
      */
-    update(delta) {
+    update() {
         if (this.tick) {
-            this.time -= delta;
+            this.time -= timing.deltaTime;
             if (this.time < 0) {
                 this.time = 0;
                 this.hide();
@@ -135,6 +134,4 @@ class DialogueBox {
         this.set(this.currentDialogue, this.currentLine);
     }
 }
-
-//set up dialogueBox
 let dialogueBox = new DialogueBox();

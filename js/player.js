@@ -26,9 +26,8 @@ class Player {
 
     /**
      * 
-     * @param {number} delta Time since last update.
      */
-    update(delta) {
+    update() {
 	    this.goldAmountText.innerHTML = this.gold.toString();
     }
 }
