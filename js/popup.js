@@ -11,7 +11,7 @@ class Popup {
      * @param {Element} parent Parent of the new popup.
      */
     constructor(icon, title, info, time, left, bottom, width, height, parent) {
-        this.$popup = $(".popup");
+        this.$popup = $("#popup-0");
         this.$popup = this.$popup.clone();
         parent.append(this.$popup);
         this.$icon = this.$popup.children().eq(0);
