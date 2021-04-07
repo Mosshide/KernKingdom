@@ -1,7 +1,7 @@
 //set up horizontal scrolling
-window.addEventListener('wheel', function(e) {
+$("main").bind("mousewheel", function(e) {
     if (e.deltaY !== 0) {
-        document.documentElement.scrollTop -= e.deltaY;
-        document.documentElement.scrollLeft += e.deltaY;
+        document.documentElement.scrollTop -= e.originalEvent.deltaY;
+        document.documentElement.scrollLeft += e.originalEvent.deltaY;
     }
 });

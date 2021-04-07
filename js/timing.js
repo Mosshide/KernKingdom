@@ -1,5 +1,5 @@
 class Timing {
-    constructor(active, type, div, xOrder) {
+    constructor() {
         this.deltaTime = Date.now();
         this.lastTime = this.deltaTime;
         this.fps = 10;

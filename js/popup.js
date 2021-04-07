@@ -11,14 +11,14 @@ class Popup {
      * @param {Element} parent Parent of the new popup.
      */
     constructor(icon, title, info, time, left, bottom, width, height, parent) {
-        this.popupElement = document.querySelector(".popup");
-        this.popupElement = this.popupElement.cloneNode(true);
-        parent.appendChild(this.popupElement);
-        this.iconElement = this.popupElement.children[0];
-        this.titleElement = this.popupElement.children[1];
-        this.infoElement = this.popupElement.children[2];
+        this.$popup = $(".popup");
+        this.$popup = this.$popup.clone();
+        parent.append(this.$popup);
+        this.$icon = this.$popup.children().eq(0);
+        this.$title = this.$popup.children().eq(1);
+        this.$info = this.$popup.children().eq(2);
         this.dead = false;
-        this.popupElement.style.display = "flex";
+        this.$popup.css("display", "flex");
         this.set(icon, title, info, time, left, bottom, width, height);
     }
 
@@ -39,7 +39,7 @@ class Popup {
             this.time -= timing.deltaTime;
             if (this.time < 0) {
                 this.time = 0;
-                this.popupElement.remove();
+                this.$popup.remove();
                 this.dead = true;
             }
         }
@@ -56,15 +56,15 @@ class Popup {
      * @param {number} height Height of the new popup in px.
      */
     set (icon, title, info, time, left, bottom, width, height) {
-        this.popupElement.style.left = left.toString() + "px";
-        this.popupElement.style.bottom = bottom.toString() + "px";
-        this.popupElement.style.width = width.toString() + "px";
-        this.popupElement.style.height = height.toString() + "px";
-        this.iconElement.setAttribute("src", icon);
-        this.titleElement.innerHTML = title;
-        this.infoElement.innerHTML = info;
+        this.$popup.css("left", left.toString() + "px");
+        this.$popup.css("bottom", bottom.toString() + "px");
+        this.$popup.css("width", width.toString() + "px");
+        this.$popup.css("height", height.toString() + "px");
+        this.$icon.attr("src", icon);
+        this.$title.html(title);
+        this.$info.html(info);
         this.time = time;
-        if (icon === "") this.iconElement.style.display = "none";
+        if (icon === "") this.$icon.css("display", "none");
     }
 }
 

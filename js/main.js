@@ -1,11 +1,12 @@
 dialogueBox.set(0, 0);
 dialogueBox.show();
 
-document.querySelector(".save-button").addEventListener('click', function(e) {
-	popupManager.create(new Popup("", "Saved!", "", 1000, -80, -15, 75, 30, e.target));
+$(".save-button").on("click", function(e) {
+	popupManager.create(new Popup("", "Saved!", "", 1000, -80, -15, 75, 30, $(".save-button")));
 });
-document.querySelector(".gold-button").addEventListener('click', function(e) {
-	popupManager.create(new Popup("", "Your Gold", "You have " + player.gold.toString() + " gold.", 3000, 60, 50, 150, 50, e.target));
+$(".gold-button").on("click", function(e) {
+	popupManager.create(new Popup("", "Your Gold", "You have " + player.gold.toString() + " gold.", 
+		3000, 60, 50, 150, 50, $(".gold-button")));
 });
 
 

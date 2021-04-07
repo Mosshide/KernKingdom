@@ -5,7 +5,7 @@ class Player {
      */
     constructor(gold) {
         this.gold = gold;
-        this.goldAmountText = document.querySelector(".gold-amount");
+        this.$goldAmount = $(".gold-amount");
     }
 
     /**
@@ -28,7 +28,7 @@ class Player {
      * 
      */
     update() {
-	    this.goldAmountText.innerHTML = this.gold.toString();
+	    this.$goldAmount.html(this.gold.toString());
     }
 }
 let player = new Player(0);
