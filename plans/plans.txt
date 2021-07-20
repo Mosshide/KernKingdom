@@ -1,0 +1,31 @@
+Main Objective:
+    Endlessly expand your kingdom.
+
+Dangers:
+    None for now.
+
+
+
+Step 1:
+    Repair your castle.
+        Stage: Cleaning
+            - "Hail young Kern! We had quite the party last night, didn't we? Well, let's get back to work."
+            - Button: Clean Up. This sets Kern to work cleaning. He finds gold gradually while doing this.
+            - Button: Hire Helper. To help clean up.
+        Stage: Repairing
+            - Button: Repair Section. Repairs a part of your castle so it can be used again.
+        Stage: Assigning
+            - Button: Assign Section. Assigns a job to workers in a section.
+
+Step 2:
+    Build new settlements.
+        Stage: No Settlement
+            - Button: New Settlement.
+        Stage: Settling
+            - Button: Add Settlers.
+        Stage Assigning
+            - Button: Assign Settlement Section.
+
+Step 3:
+    Raid dungeons.
+        Button: Explore. Surrounding settlements will send explorers as they level up.
